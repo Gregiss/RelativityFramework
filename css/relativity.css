@@ -75,8 +75,8 @@ button{
 }
 
 textarea{
-    padding: 10px;
-    height: 300px;
+    padding: 30px;
+    height: auto;
     width: 300px;
 }
 
