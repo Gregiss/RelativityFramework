@@ -1,0 +1,166 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+:root{
+    --light: #3D7EAA;
+    --light_hover : #5e9bc3;
+    --light_border : #35576f;
+    --night: #364452;
+    --night_hover: #485563;
+    --night_border: #2e363e;
+}
+
+body{
+    color: #151515;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100%;
+    width: 100%;
+    font-size: 13px;
+}
+
+p, span{
+    font-size: 22px;
+}
+
+h2{
+    padding: 20px;
+    font-size: 30px;
+}
+
+a{
+    color: #fff;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+/* Globals */
+button, input, a, textarea{
+    outline: none;
+    resize: none;
+    border: none;
+    text-decoration: none;
+}
+
+/* Buttons */
+button{
+    outline: none;
+    width: 150px;
+    padding: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+    z-index: 1;
+    margin-top: 20px;
+    color: #fff;
+    left: 10px;
+}
+
+button::before{
+    content: '';
+    width: 150px;
+    height: 29px;
+    position: absolute;
+    transition: 1s;
+    z-index: 10;
+    margin: -4px -11px;
+}
+
+.light{
+    background-color: var(--light);
+}
+
+.light:hover, .light:active{
+    background-color: var(--light_hover);
+}
+
+.btn:active{
+    transform: translateY(4px);
+}
+
+.light::before{
+    background-color: transparent;
+    border-bottom: 5px solid var(--light_border);
+    border-radius: 2px;
+}
+
+.dark{
+    background-color: var(--night);
+    color: #fff;
+}
+
+.dark:hover, .dark:active{
+    background-color: var(--night_hover);
+}
+
+.dark::before{
+    background-color: transparent;
+    border-bottom: 5px solid var(--night_border);
+    border-radius: 2px;
+}
+
+.card{
+    width: 250px;
+    height: 300px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.card::before{
+    content: '';
+    width: 270px;
+    height: 310px;
+    position: absolute;
+    left: 0px;
+    transition: 1s;
+    z-index: 10;
+}
+
+.card .avatar{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.card .desc{
+    position: relative;
+    height: 170px;
+    overflow: auto;
+    z-index: 50;
+}
+
+.card .desc p{
+    font-size: 15px;
+    padding: 5px;
+}
+
+.inline-block{
+    position: relative;
+    display: inline-block;
+}
+
+.menu{
+    padding: 10px;
+    cursor: pointer;
+}
